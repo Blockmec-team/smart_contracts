@@ -13,7 +13,6 @@ describe("IdentityContract", function () {
 
     IdentityContract = await ethers.getContractFactory("IdentityContract");
     identityContract = await IdentityContract.deploy();
-    await identityContract.deployed();
   });
 
   it("Should register a new user", async function () {
