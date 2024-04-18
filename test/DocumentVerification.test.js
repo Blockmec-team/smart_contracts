@@ -39,7 +39,7 @@ describe("DocumentVerification", function () {
     const documentId = ethers.solidityPackedKeccak256(["address", "string"], [user.address, documentHash]);
     await documentVerification.connect(user).grantAccess(documentId, verifier.address);
 
-    const verifierAddress = await documentVerification.documentAccess(documentId);
+    const verifierAddress = await documentVerification.grantAccess(documentId);
     expect(verifierAddress).to.equal(verifier.address);
   });
 
