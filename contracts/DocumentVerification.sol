@@ -70,4 +70,5 @@ contract DocumentVerification {
     function grantAccess(bytes32 documentId, address verifier) external onlyOwner(documentId) {
         documentAccess[documentId] = verifier;
     }
+    
 }
